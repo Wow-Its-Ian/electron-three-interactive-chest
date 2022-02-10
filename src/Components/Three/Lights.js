@@ -1,18 +1,21 @@
 import React from 'react';
 
 const Lights = () => {
-  const shadowProps = {
-    mapSize: { width: 1024, height: 1024 },
-    camera: { far: 50, left: -10, right: 10, top: 10, bottom: -10 },
-  };
   return (
     <>
+      <fog attach="fog" args={['fff', 0, 22]} />
       <ambientLight intensity={0.4} />
       <directionalLight
         castShadow
         position={[-8, 16, -8]}
         intensity={0}
-        shadow={shadowProps}
+        shadow-mapSize-width={1024}
+        shadow-mapSize-height={1024}
+        shadow-camera-far={50}
+        shadow-camera-left={-10}
+        shadow-camera-right={10}
+        shadow-camera-top={10}
+        shadow-camera-bottom={-10}
       />
       <pointLight position={[0, 50, 0]} intensity={2} />
     </>

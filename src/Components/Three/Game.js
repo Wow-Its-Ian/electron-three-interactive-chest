@@ -4,6 +4,7 @@ import { OrbitControls, Stars } from '@react-three/drei';
 import { Physics, useBox, usePlane } from '@react-three/cannon';
 import ChestModel from './GLTF/Chest';
 import Lights from './Lights';
+import Floor from './Floor';
 
 // function Box() {
 //   const [boxRef, boxApi] = useBox(() => ({ mass: 1 }));
@@ -33,17 +34,14 @@ import Lights from './Lights';
 
 export default function Game() {
   return (
-    <Canvas
-      colorManagement
-      shadowMap
-      camera={{ position: [-5, 4, 4], fov: 40 }}
-    >
+    <Canvas colorManagement shadows camera={{ position: [-5, 4, 4], fov: 40 }}>
+      <Lights />
       <Suspense fallback={null}>
         <ChestModel />
+        <Floor />
       </Suspense>
-      <color attach="background" args={['black']} />
+      {/* <color attach="background" args={['black']} /> */}
       <OrbitControls />
-      <Lights />
       {/* <Physics>
         <Box />
         <Ground />
