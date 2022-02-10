@@ -1,16 +1,20 @@
-# Electron React Three Boilerplate
+# Electron Three Interactive Chest
 
-This project serves as a starting point for electron apps that utilize React and Three.js. Included is a basic scene with a canvas, lighting, example meshes, and basic physics.
+This project shows an implementation of basic game mechanics for user interaction with items.
 
 ## Instructions For Getting Started With Boilerplate
 
 1. run `npm -i` to install all necessary packages
-2. run `npm start dev` to begin your development server and open your electron window
-3. navigate to src/App.js to begin working on your app, or to src/Components/Game.js to start working with your Three.js canvass directly
+2. run `npm run dev` to begin your development server and open your electron window
+3. navigate to src/App.js to make any changes on your app, or to src/Components/Game.js to start working with your Three.js and chest canvass directly
+
+## Electron React Three Info
+
+This project was started by cloning my[Electron-React-Three-Boilerplate](https://github.com/Wow-Its-Ian/electron-react-three-boilerplate) project from Github.
 
 ## Additional Create React App Info
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The original repository was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
