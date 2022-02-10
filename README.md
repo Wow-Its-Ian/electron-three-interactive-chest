@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Electron React Three Boilerplate
+
+This project serves as a starting point for electron apps that utilize React and Three.js. Included is a basic scene with a canvas, lighting, example meshes, and basic physics.
+
+## Instructions For Getting Started
+
+1. run `npm -i` to install all necessary packages
+2. run `npm start dev` to begin your development server and open your electron window
+3. navigate to src/App.js to begin working on your app, or to src/Components/Game.js to start working with your Three.js canvass directly
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
