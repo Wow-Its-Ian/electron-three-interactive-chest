@@ -3,6 +3,7 @@ import { Canvas } from 'react-three-fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import { Physics, useBox, usePlane } from '@react-three/cannon';
 import ChestModel from './GLTF/Chest';
+import Lights from './Lights';
 
 // function Box() {
 //   const [boxRef, boxApi] = useBox(() => ({ mass: 1 }));
@@ -42,8 +43,7 @@ export default function Game() {
       </Suspense>
       <color attach="background" args={['black']} />
       <OrbitControls />
-      <ambientLight intensity={0.5} />
-      <spotLight position={[10, 15, 10]} angle={0.3} />
+      <Lights />
       {/* <Physics>
         <Box />
         <Ground />
