@@ -6,6 +6,14 @@ import React, { useRef } from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import { useSpring, a } from '@react-spring/three';
 
+// Chest Sound
+import chestOpenSound from '../../../assets/sound/open-chest.mp3';
+import chestCloseSound from '../../../assets/sound/close-chest.mp3';
+const openChest = new Audio(chestOpenSound);
+const closeChest = new Audio(chestCloseSound);
+openChest.volume = 0.3;
+closeChest.volume = 0.3;
+
 export default function Model({ ...props }) {
   const group = useRef();
   const { nodes, materials } = useGLTF('/coffre-minecraft.glb');
@@ -13,6 +21,7 @@ export default function Model({ ...props }) {
   // open function
   const handleOpen = () => {
     props.setOpen(!props.open);
+    !props.open ? openChest.play() : closeChest.play();
   };
 
   // open animation
