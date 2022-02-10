@@ -23,7 +23,11 @@ export default function Model({ ...props }) {
 
   return (
     <group onClick={handleOpen} ref={group} {...props} dispose={null}>
-      <group name="Armature" position={[0, -0.99, 0]}>
+      <a.group
+        rotation={openChestAnimation.position}
+        name="Armature"
+        position={[0, -0.99, 0]}
+      >
         {/* bottom of chest */}
         <primitive object={nodes.Bone} />
         {/* top of chest ANIMATED */}
@@ -37,7 +41,7 @@ export default function Model({ ...props }) {
           material={materials.Material}
           skeleton={nodes.Cube.skeleton}
         />
-      </group>
+      </a.group>
     </group>
   );
 }
